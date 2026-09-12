@@ -42,4 +42,15 @@ async function finalizarViaje(req, res, next) {
   try {
     const viaje = await viajeService.finalizarViaje(req.params.id, req.body.paradero_final_id);
     res.json(viaje);
+  } catch (err) {
+    next(err);
   }
+}
+
+module.exports = {
+  crearViaje,
+  obtenerViaje,
+  listarPorPasajero,
+  obtenerViajesBatch,
+  finalizarViaje
+};

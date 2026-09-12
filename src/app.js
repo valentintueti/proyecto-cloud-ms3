@@ -13,8 +13,6 @@ app.use('/health', healthRoutes);
 app.use('/viajes', viajeRoutes);
 app.use('/conexiones', conexionRoutes);
 
-// Debe ir AL FINAL, después de todas las rutas: es lo que le indica a Express
-// que este middleware captura los errores pasados con next(err)
 app.use(errorHandler);
 
 module.exports = app;

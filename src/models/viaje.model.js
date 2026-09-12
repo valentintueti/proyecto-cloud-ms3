@@ -30,7 +30,7 @@ const Viaje = sequelize.define('Viaje', {
   },
   paradero_final_id: {
     type: DataTypes.STRING,
-    allowNull: true          // NUEVO: nullable
+    allowNull: true
   },
   estado: {
     type: DataTypes.ENUM('en_curso', 'finalizado'),

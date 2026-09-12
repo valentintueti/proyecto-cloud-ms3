@@ -8,7 +8,6 @@ async function obtenerPorId(id) {
   return Conexion.findByPk(id);
 }
 
-// Trae las conexiones donde el viaje participa, ya sea como origen o destino del trasbordo
 async function listarPorViaje(viajeId) {
   return Conexion.findAll({
     where: {
@@ -20,7 +19,6 @@ async function listarPorViaje(viajeId) {
   });
 }
 
-// Usado por MS4: todas las conexiones de un pasajero, con los dos viajes ya incluidos
 async function listarPorPasajeroConViajes(pasajeroId) {
   return Conexion.findAll({
     include: [

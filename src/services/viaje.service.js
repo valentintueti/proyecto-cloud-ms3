@@ -4,10 +4,8 @@ const ms2Client = require('./clients/ms2.client');
 const { NotFoundError, ValidationError } = require('../middlewares/errors');
 
 async function crearViaje(data) {
-  // Validar que la tarjeta exista en MS1 (llamada externa)
   await ms1Client.obtenerTarjeta(data.tarjeta_id);
 
-  // Validar que el servicio exista en MS2 (llamada externa)
   await ms2Client.obtenerServicio(data.servicio_id);
 
   return viajeRepository.crear({
@@ -45,3 +43,14 @@ async function finalizarViaje(id, paraderoFinalId) {
 
   return viajeRepository.actualizar(id, {
     paradero_final_id: paraderoFinalId,
+    estado: 'finalizado'
+  });
+}
+
+module.exports = {
+  crearViaje,
+  obtenerViaje,
+  listarPorPasajero,
+  obtenerViajesBatch,
+  finalizarViaje
+};

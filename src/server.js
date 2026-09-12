@@ -8,8 +8,6 @@ async function iniciar() {
     await sequelize.authenticate();
     console.log('Conexión a MySQL establecida correctamente.');
 
-    // sync() crea las tablas si no existen, basándose en los modelos definidos
-    // (equivalente a spring.jpa.hibernate.ddl-auto=update en MS1)
     await sequelize.sync();
     console.log('Modelos sincronizados con la base de datos.');
 

@@ -18,7 +18,7 @@ class ExternalServiceError extends Error {
   constructor(message) {
     super(message);
     this.name = 'ExternalServiceError';
-    this.statusCode = 502;   // Bad Gateway: falló la llamada a MS1 o MS2
+    this.statusCode = 502;
   }
 }
 
