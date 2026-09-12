@@ -1,0 +1,21 @@
+{
+  "name": "ms3-viajes",
+  "version": "1.0.0",
+  "description": "MS3 - Registro de viajes y conexiones",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "sequelize": "^6.37.3",
+    "mysql2": "^3.11.0",
+    "dotenv": "^16.4.5",
+    "axios": "^1.7.7",
+    "joi": "^17.13.3"
+  },
+  "devDependencies": {
+    "nodemon": "^18.0.0"
+  }
+}
