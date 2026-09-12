@@ -41,3 +41,5 @@ const Viaje = sequelize.define('Viaje', {
   tableName: 'viaje',
   timestamps: false
 });
+
+module.exports = Viaje;

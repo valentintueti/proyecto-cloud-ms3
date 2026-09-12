@@ -16,6 +16,6 @@
     "joi": "^17.13.3"
   },
   "devDependencies": {
-    "nodemon": "^18.0.0"
+    "nodemon": "^3.0.0"
   }
 }
